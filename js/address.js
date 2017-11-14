@@ -2,7 +2,7 @@
  * @Author: Leo 
  * @Date: 2017-11-13 20:16:13 
  * @Last Modified by: Leo
- * @Last Modified time: 2017-11-14 17:38:58
+ * @Last Modified time: 2017-11-14 20:12:58
  */
 
 var vm = new Vue({
@@ -64,15 +64,14 @@ var vm = new Vue({
             this.tel = item.tel;
         },
         editAddress: function () {
-            // todo 编辑
+            // 编辑
             if (this.currentIndex === this.addressList.indexOf(this.currentAddress) ) {
                 this.currentAddress.userName = this.userName.trim() ? this.userName.trim() : this.currentAddress.userName;
                 this.currentAddress.streetName = this.streetName.trim() ? this.streetName.trim() : this.currentAddress.streetName;
                 this.currentAddress.tel = this.tel.trim() ? this.tel.trim() : this.currentAddress.tel;
             } else {
-                console.log(1);
+            // 调后台新增接口
             }
-
             this.editFlag = false;
         },
     }
